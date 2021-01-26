@@ -7,19 +7,23 @@
             "ingredients": [
                 {
                     "name": "green onions",
-                    "quantity": 2
+                    "quantity": 2,
+                    "units": "each"
                 },
                 {
                     "name": "chicken thighs",
-                    "quantity": 8
+                    "quantity": 8,
+                    "units": "each"
                 },
                 {
                     "name": "red onions",
-                    "quantity": 1
+                    "quantity": 1,
+                    "units": "each"
                 },
                 {
                     "name": "potatoes",
-                    "quantity": 15
+                    "quantity": 15,
+                    "units": "pound"
                 }
             ]
         },
@@ -29,20 +33,24 @@
             "blurb": "super delish",
             "ingredients": [
                 {
-                    "name": "green onions",
-                    "quantity": 2
+                    "name": "zucchini",
+                    "quantity": 2,
+                    "units": "each"
                 },
                 {
-                    "name": "chicken thighs",
-                    "quantity": 8
+                    "name": "steak",
+                    "quantity": 8,
+                    "units": "each"
                 },
                 {
-                    "name": "red onions",
-                    "quantity": 1
+                    "name": "lentils",
+                    "quantity": 1,
+                    "units": "cup"
                 },
                 {
-                    "name": "potatoes",
-                    "quantity": 15
+                    "name": "sumach",
+                    "quantity": 15,
+                    "units": "gram"
                 }
             ]
         },
@@ -52,20 +60,51 @@
             "blurb": "super delish",
             "ingredients": [
                 {
+                    "name": "black peppercorns",
+                    "quantity": 2,
+                    "units": "Tbsp"
+                },
+                {
+                    "name": "chickpeas",
+                    "quantity": 8,
+                    "units": "can"
+                },
+                {
+                    "name": "cabbage",
+                    "quantity": 1,
+                    "units": "each"
+                },
+                {
+                    "name": "peas",
+                    "quantity": 1.5,
+                    "units": "cup"
+                }
+            ]
+        },
+        {
+            "title": "recipe 4",
+            "id": "uniqueid4",
+            "blurb": "super delish",
+            "ingredients": [
+                {
                     "name": "green onions",
-                    "quantity": 2
+                    "quantity": 5,
+                    "units": "each"
                 },
                 {
-                    "name": "chicken thighs",
-                    "quantity": 8
+                    "name": "black beans",
+                    "quantity": 6,
+                    "units": "can"
                 },
                 {
-                    "name": "red onions",
-                    "quantity": 1
+                    "name": "cabbage",
+                    "quantity": 1,
+                    "units": "each"
                 },
                 {
-                    "name": "potatoes",
-                    "quantity": 15
+                    "name": "corn",
+                    "quantity": 15,
+                    "units": "cup"
                 }
             ]
         }
