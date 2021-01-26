@@ -1,0 +1,73 @@
+{
+    "recipes": [
+        {
+            "title": "recipe 1",
+            "id": "uniqueid1",
+            "blurb": "super delish",
+            "ingredients": [
+                {
+                    "name": "green onions",
+                    "quantity": 2
+                },
+                {
+                    "name": "chicken thighs",
+                    "quantity": 8
+                },
+                {
+                    "name": "red onions",
+                    "quantity": 1
+                },
+                {
+                    "name": "potatoes",
+                    "quantity": 15
+                }
+            ]
+        },
+        {
+            "title": "recipe 2",
+            "id": "uniqueid2",
+            "blurb": "super delish",
+            "ingredients": [
+                {
+                    "name": "green onions",
+                    "quantity": 2
+                },
+                {
+                    "name": "chicken thighs",
+                    "quantity": 8
+                },
+                {
+                    "name": "red onions",
+                    "quantity": 1
+                },
+                {
+                    "name": "potatoes",
+                    "quantity": 15
+                }
+            ]
+        },
+        {
+            "title": "recipe 3",
+            "id": "uniqueid3",
+            "blurb": "super delish",
+            "ingredients": [
+                {
+                    "name": "green onions",
+                    "quantity": 2
+                },
+                {
+                    "name": "chicken thighs",
+                    "quantity": 8
+                },
+                {
+                    "name": "red onions",
+                    "quantity": 1
+                },
+                {
+                    "name": "potatoes",
+                    "quantity": 15
+                }
+            ]
+        }
+    ]
+}
