@@ -14,10 +14,21 @@ const App = () => {
 		)
 		// 4. compare that array of ids to the full list of recipes and get all the matching recipes
 		const checkedRecipes = recipes.filter(recipe => checkedIds.includes(recipe.id))
+		// 5. from all the recipes make a master list of all ingredients
 		const allIngredients = checkedRecipes.map(recipe => recipe.ingredients).flat()
-		console.log(allIngredients)
 
-		setIngredients(allIngredients)
+		// 6. merge duplicate ingredients and add their quantities
+		let counts = allIngredients.reduce((prev, curr) => {
+			let count = prev.get(curr.name) || 0
+			prev.set(curr.name, curr.quantity + count, curr.units)
+			console.log(prev)
+			return prev
+		}, new Map())
+		let combinedIngredients = [...counts].map(([name, quantity, units]) => {
+			return { name, quantity, units }
+		})
+
+		setIngredients(combinedIngredients)
 	}
 
 	const buttonHandler = () => {
@@ -49,8 +60,11 @@ const App = () => {
 					<ul>
 						{ingredients &&
 							ingredients.length > 0 &&
-							ingredients.map((ingredient, index) => {
-								return <li key={index}>{`${ingredient.quantity} ${ingredient.name}`}</li>
+							ingredients.map(({ name, quantity, units }, index) => {
+								const unit = units === 'each' ? '' : quantity > 1 ? `${units}s` : `${units}`
+								const ingredientListItem = `${quantity} ${unit} ${name}`
+
+								return <li key={index}>{ingredientListItem}</li>
 							})}
 					</ul>
 				</section>
