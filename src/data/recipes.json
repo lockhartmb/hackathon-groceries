@@ -1,7 +1,7 @@
 {
     "recipes": [
         {
-            "title": "recipe 1",
+            "title": "Whole Roasted Cauliflower with Green Pea Chutney",
             "id": "uniqueid1",
             "blurb": "super delish",
             "ingredients": [
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "title": "recipe 2",
+            "title": "Cauliflower tacos with cashew crema",
             "id": "uniqueid2",
             "blurb": "super delish",
             "ingredients": [
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "title": "recipe 3",
+            "title": "Chicken and rice meatballs with hummus",
             "id": "uniqueid3",
             "blurb": "super delish",
             "ingredients": [
@@ -82,7 +82,7 @@
             ]
         },
         {
-            "title": "recipe 4",
+            "title": "Roasted squash salad with crispy chickpeas",
             "id": "uniqueid4",
             "blurb": "super delish",
             "ingredients": [

@@ -1,5 +1,9 @@
+/** @jsxImportSource @emotion/react */
 import { useState } from 'react'
 import data from './data/recipes.json'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import * as styles from './styles'
 
 const App = () => {
 	const [ingredients, setIngredients] = useState([])
@@ -36,9 +40,8 @@ const App = () => {
 	}
 
 	return (
-		<div className="App">
-			<header className="App-header">Hackathon Groceries</header>
-
+		<div css={styles.body}>
+			<Header />
 			<main>
 				<section>
 					<form>
@@ -70,7 +73,7 @@ const App = () => {
 				</section>
 			</main>
 
-			<footer>Hackathon 2021</footer>
+			<Footer />
 		</div>
 	)
 }
