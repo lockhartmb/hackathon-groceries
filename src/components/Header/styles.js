@@ -8,5 +8,13 @@ export const header = css`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 0 30px;
+	color: white;
+`
+
+export const title = css``
+
+export const titleLink = css`
+	text-decoration: none;
 	color: white;
 `

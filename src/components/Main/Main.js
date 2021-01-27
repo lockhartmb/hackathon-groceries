@@ -20,15 +20,12 @@ const Main = () => {
 		const allIngredients = checkedRecipes.map(recipe => recipe.ingredients).flat()
 
 		// 6. merge duplicate ingredients and add their quantities
-		let counts = allIngredients.reduce((prev, curr) => {
-			let count = prev.get(curr.name) || 0
-			prev.set(curr.name, curr.quantity + count, curr.units)
-			console.log(prev)
+		const combinedIngredients = allIngredients.reduce((prev, curr) => {
+			let x = prev.find(ingredient => ingredient.name === curr.name)
+			if (!x) prev.push(Object.assign({}, curr))
+			else x.quantity += curr.quantity
 			return prev
-		}, new Map())
-		let combinedIngredients = [...counts].map(([name, quantity, units]) => {
-			return { name, quantity, units }
-		})
+		}, [])
 
 		setIngredients(combinedIngredients)
 	}
@@ -39,7 +36,7 @@ const Main = () => {
 
 	return (
 		<main css={styles.main}>
-			<section css={styles.formSection}>
+			<section>
 				<form css={styles.form}>
 					{recipes.map(recipe => {
 						const { title, id } = recipe
@@ -55,18 +52,26 @@ const Main = () => {
 					</button>
 				</form>
 			</section>
-			<section>
-				<ul>
-					{ingredients &&
-						ingredients.length > 0 &&
-						ingredients.map(({ name, quantity, units }, index) => {
-							const unit = units === 'each' ? '' : quantity > 1 ? `${units}s` : `${units}`
-							const ingredientListItem = `${quantity} ${unit} ${name}`
 
-							return <li key={index}>{ingredientListItem}</li>
-						})}
-				</ul>
-			</section>
+			{ingredients && ingredients.length > 0 && (
+				<section>
+					<div css={styles.listContainer}>
+						<h2 css={styles.subtitle}>Groceries</h2>
+						<ul css={styles.list}>
+							{ingredients.map(({ name, quantity, units }, index) => {
+								const unit = units === 'each' ? '' : quantity > 1 ? `${units}s` : `${units}`
+								const ingredientListItem = `${quantity} ${unit} ${name}`
+
+								return (
+									<li key={index} css={styles.listItem}>
+										{ingredientListItem}
+									</li>
+								)
+							})}
+						</ul>
+					</div>
+				</section>
+			)}
 		</main>
 	)
 }
