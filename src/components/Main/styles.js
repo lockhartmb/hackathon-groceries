@@ -16,14 +16,40 @@ export const form = css`
 
 export const recipeCard = css`
 	width: 200px;
-	height: 80px;
-	/* text-align: center; */
+	min-height: 60px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	border-radius: 15px;
+	border: 3px solid black;
+	background: white;
+	padding: 10px;
+	margin-bottom: 10px;
+	position: relative;
 
 	label {
 		padding-left: 20px;
+	}
+
+	input {
+		opacity: 0;
+		z-index: 100;
+	}
+
+	label::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 20px;
+		width: 20px;
+		border: 3px solid black;
+	}
+
+	input[type='checkbox']:checked ~ label::before {
+		background-color: black;
 	}
 `
 
