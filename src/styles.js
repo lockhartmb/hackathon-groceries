@@ -1,12 +1,13 @@
 import { css } from '@emotion/react'
+import COLORS from './styles/vars'
 
 export const body = css`
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-`
+	background-color: ${COLORS.purple.light};
 
-export const main = css`
-	flex-grow: 2;
+	main {
+		flex-grow: 2;
+	}
 `
